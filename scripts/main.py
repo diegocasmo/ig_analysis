@@ -5,7 +5,7 @@ import os, json, pdb
 from InstagramAPI import InstagramAPI
 from dotenv import load_dotenv
 load_dotenv()
-from create_csv import create_csv_file
+from csv_utils import save_as_csv
 
 if __name__ == '__main__':
   # Get user API
@@ -20,6 +20,8 @@ if __name__ == '__main__':
     'feed': api.getTotalUserFeed(username_id)
   }
 
-  # Create a .csv file of user's data
+  # Create .csv files of user's data
+  dir_name = '{}-{}'.format(api.username, username_id)
   for file_name, data in datasets.items():
-    create_csv_file(data, file_name)
+    file_path = r'data/{}/{}.csv'.format(dir_name, file_name)
+    save_as_csv(data, file_path)
