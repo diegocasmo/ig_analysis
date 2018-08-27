@@ -5,4 +5,4 @@ def get_total_user_feed(api):
   '''
   TODO: Document
   '''
-  return api.getTotalUserFeed(api.username_id)
+  return api.getTotalSelfUserFeed()

@@ -5,4 +5,4 @@ def get_total_following(api):
   '''
   TODO: Document
   '''
-  return api.getUserFollowings(api.username_id)
+  return api.getTotalSelfFollowings()
