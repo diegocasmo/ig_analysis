@@ -13,10 +13,13 @@ if __name__ == '__main__':
   api.login()
   username_id = api.username_id
 
-  # Create a .csv file of the user's followers
-  followers = api.getTotalFollowers(username_id)
-  create_csv_file(followers, 'followers')
+  # Get user's data
+  datasets = {
+    'followers': api.getTotalFollowers(username_id),
+    'following': api.getUserFollowings(username_id),
+    'feed': api.getTotalUserFeed(username_id)
+  }
 
-  # Create a .csv file of the user's following
-  following = api.getUserFollowings(username_id)
-  create_csv_file(following, 'following')
+  # Create a .csv file of user's data
+  for file_name, data in datasets.items():
+    create_csv_file(data, file_name)
