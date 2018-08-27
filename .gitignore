@@ -207,5 +207,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-
-# End of https://www.gitignore.io/api/osx,python,windows,sublimetext
+# dotenv environment variables file
+.env
