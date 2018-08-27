@@ -209,3 +209,6 @@ $RECYCLE.BIN/
 
 # dotenv environment variables file
 .env
+
+# Ignore data generated files
+/data/*
