@@ -3,6 +3,6 @@
 
 def get_total_following(api):
   '''
-  TODO: Document
+  Return accounts followed by the current user
   '''
   return api.getTotalSelfFollowings()

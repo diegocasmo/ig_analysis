@@ -3,6 +3,6 @@
 
 def get_total_followers(api):
   '''
-  TODO: Document
+  Return current user's followers
   '''
   return api.getTotalSelfFollowers()

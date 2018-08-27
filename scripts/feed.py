@@ -3,6 +3,6 @@
 
 def get_total_user_feed(api):
   '''
-  TODO: Document
+  Return current user feed (posts) and meta-data related to them
   '''
   return api.getTotalSelfUserFeed()
