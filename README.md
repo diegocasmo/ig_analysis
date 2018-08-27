@@ -7,5 +7,5 @@
   - Copy ``.env.example`` file to ``.env`` and set up the environment variables accordingly
 
 ### Usage
-  - Run ``python lib/main.py`` in your terminal to get IG user data (this will create a number of .csv files in the ``/data`` directory)
+  - Run ``python scripts/main.py`` in your terminal to get IG user data (this will create a number of .csv files in the ``/data`` directory)
   - Open ``analysis/ig_analysis.ipynb`` with Jupyter to and run the cells to see the analysis of the IG user data
