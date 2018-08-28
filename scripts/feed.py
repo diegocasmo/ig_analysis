@@ -16,8 +16,17 @@ def get_total_feed(api):
   feed = []
   for item in items:
     post = build_post(item)
-    post['likers'] = get_media_likers(api, post['id'])
-    post['comments'] = get_media_comments(api, post['id'])
+
+    # Get media likers
+    likers = get_media_likers(api, post['id'])
+    post['likers'] = likers
+    post['likes_count'] = len(likers)
+
+    # Get media comments
+    comments = get_media_comments(api, post['id'])
+    post['comments'] = comments
+    post['comments_count'] = len(comments)
+
     feed.append(post)
 
   return feed

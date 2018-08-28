@@ -25,7 +25,9 @@ def build_post(post = {}):
     'text': post['caption']['text'],
     'taken_at': post['taken_at'],
     'likers': [],
-    'comments': []
+    'likes_count': 0,
+    'comments': [],
+    'comments_count': 0
   }
 
 def build_comment(comment = {}):
