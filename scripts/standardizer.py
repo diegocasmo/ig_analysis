@@ -23,7 +23,7 @@ def build_post(post = {}):
     'pk': post['pk'],
     'media_type': post['media_type'],
     'thumbnail_url': post['image_versions2']['candidates'][0]['url'],
-    'text': post['caption']['text'],
+    'text': post['caption']['text'] if post['caption'] == True else '',
     'taken_at': post['taken_at'],
     'likers': [],
     'likes_count': 0,

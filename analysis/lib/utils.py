@@ -6,6 +6,7 @@ import datetime as dt
 from collections import Counter
 
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 from skimage import io
 from dotenv import load_dotenv
@@ -19,8 +20,13 @@ def get_user_dataframes():
   dir_name = r'../data/{}'.format(folder_name)
 
   followers_df = pd.read_csv('{}/followers.csv'.format(dir_name))
+  followers_df = followers_df.replace(np.nan, '', regex=True)
+
   following_df = pd.read_csv('{}/following.csv'.format(dir_name))
+  following_df = following_df.replace(np.nan, '', regex=True)
+
   feed_df = pd.read_csv('{}/feed.csv'.format(dir_name))
+  feed_df = feed_df.replace(np.nan, '', regex=True)
 
   return (followers_df, following_df, feed_df)
 
