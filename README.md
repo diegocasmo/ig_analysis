@@ -9,4 +9,4 @@
 ### Usage
   - Run ``python scripts/main.py`` in your terminal to get IG user data (this will create a number of ``.csv`` files in the ``/data`` directory)
   - Open ``analysis/ig_analysis.ipynb`` with Jupyter and run the cells to see the analysis of the IG user data
-    - The folder name (where the data is saved inside the ``./data` directory) is retrieved from an environment variable. Make sure it's correctly set in ``.env`` (``'{}-{}'.format(api.username, api.username_id)``).
+    - The folder name (where the data is saved inside the ``./data`` directory) is retrieved from an environment variable. Make sure it's correctly set in ``.env`` file (```'{}-{}'.format(api.username, api.username_id)```).

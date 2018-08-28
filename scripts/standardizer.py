@@ -22,6 +22,7 @@ def build_post(post = {}):
     'id': post['id'],
     'pk': post['pk'],
     'media_type': post['media_type'],
+    'thumbnail_url': post['image_versions2']['candidates'][0]['url'],
     'text': post['caption']['text'],
     'taken_at': post['taken_at'],
     'likers': [],
