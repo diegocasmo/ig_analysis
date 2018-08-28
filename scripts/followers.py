@@ -5,4 +5,5 @@ def get_total_followers(api):
   '''
   Return current user's followers
   '''
-  return api.getTotalSelfFollowers()
+  api.getTotalSelfFollowers()
+  return api.LastJson['users']

@@ -5,4 +5,5 @@ def get_total_feed(api):
   '''
   Return current user feed (posts) and meta-data related to them
   '''
-  return api.getTotalSelfUserFeed()
+  api.getTotalSelfUserFeed()
+  return api.LastJson['items']

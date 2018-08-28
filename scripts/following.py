@@ -5,4 +5,5 @@ def get_total_following(api):
   '''
   Return accounts followed by the current user
   '''
-  return api.getTotalSelfFollowings()
+  api.getTotalSelfFollowings()
+  return api.LastJson['users']
