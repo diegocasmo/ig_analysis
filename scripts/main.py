@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import os, json, pdb
+import os, json
 
 from InstagramAPI import InstagramAPI
 from dotenv import load_dotenv

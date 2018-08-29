@@ -3,14 +3,14 @@
 
 from standardizer import build_post, build_user, build_comment
 from logger import log
+from request import do_paginated_request
 
 def get_total_feed(api):
   '''
   Return current user feed (posts) and meta-data related to them
   '''
   log('Requesting user feed...')
-  api.getTotalSelfUserFeed()
-  items = api.LastJson['items']
+  items = do_paginated_request(api, api.getUserFeed, 'items')
 
   # Format feed data
   feed = []
